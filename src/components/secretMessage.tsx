@@ -60,8 +60,8 @@ const SecretMessage: React.FC<GiftProps> = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-pink-300 via-purple-200 to-yellow-200 text-center px-4 sm:px-6 animate-gradient-x">
-      <div className="max-w-md w-full space-y-8">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-pink-300 via-purple-200 to-yellow-200 text-center px-3 sm:px-6 animate-gradient-x">
+      <div className="w-full max-w-[320px] sm:max-w-md space-y-8">
         <div className="animate-fade-in-down">
           <h1 className="text-5xl font-bold text-purple-800 mb-4 filter drop-shadow-lg">
             a Message?
@@ -75,19 +75,19 @@ const SecretMessage: React.FC<GiftProps> = () => {
           </p>
         </div>
 
-        <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-2xl p-4 sm:p-9 border-2 border-dashed border-purple-400 transform hover:scale-105 transition-all duration-300 animate-fade-in-up">
-          <div className="relative h-[280px] w-full max-w-[320px] mx-auto">
+        <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-2xl p-4 sm:p-6 md:p-8 border-2 border-dashed border-purple-400 transform hover:scale-105 transition-all duration-300 animate-fade-in-up">
+          <div className="relative w-[280px] h-[240px] sm:w-[300px] sm:h-[260px] mx-auto">
             {/* Hidden Message */}
             <div
-              className={`absolute inset-0 flex flex-col justify-center items-center space-y-4 ${
-                isRevealed ? "opacity-100" : "opacity-40"
+              className={`absolute inset-0 flex flex-col justify-center items-center space-y-3 ${
+                isRevealed ? "opacity-100" : "opacity-0"
               }`}
             >
-              <p className="text-gray-700 text-sm sm:text-base px-2 sm:px-4">
+              <p className="text-gray-700 text-xs sm:text-sm md:text-base px-2 sm:px-4">
                 Sholawat serta salam atas keberkahan bertambahnya usia. Seperti halnya bumi yang tak lelah menerima hujan rahmat, semoga usiamu pun dipenuhi keberkahan, kebahagiaan, kesehatan, keselamatan dan kesejahteraan bagi Nana dan keluarga.
               </p>
 
-               <p className="text-gray-700 text-sm sm:text-base px-2 sm:px-4">
+               <p className="text-gray-700 text-xs sm:text-sm md:text-base px-2 sm:px-4">
                  Di sela waktu yang tersirat, ada langkah kecil diam-diam berjuang, memperbaiki, dan memantaskan.
               </p>
             </div>
@@ -95,7 +95,7 @@ const SecretMessage: React.FC<GiftProps> = () => {
             {/* Scratch Layer */}
             <canvas
               ref={canvasRef}
-              width={300}
+              width={280}
               height={240}
               className={`absolute inset-0 touch-none cursor-pointer w-full h-full ${
                 isRevealed ? "hidden" : ""
@@ -104,9 +104,8 @@ const SecretMessage: React.FC<GiftProps> = () => {
               onTouchMove={handleScratch}
             />
 
-            {/* Progress indicator */}
             {!isRevealed && (
-              <p className="absolute -bottom-6 left-0 right-0 text-xs sm:text-sm text-gray-600">
+              <p className="absolute bottom-8 left-0 right-0 text-xs sm:text-sm text-gray-600">
                 Gosok untuk melihat pesan! (
                 {Math.round(scratchPercentage)}% tergosok)
               </p>
