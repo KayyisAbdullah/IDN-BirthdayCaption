@@ -86,10 +86,6 @@ const SecretMessage: React.FC<GiftProps> = () => {
               <p className="text-gray-700 text-xs sm:text-sm md:text-base px-2 sm:px-4">
                 Sholawat serta salam atas keberkahan bertambahnya usia. Seperti halnya bumi yang tak lelah menerima hujan rahmat, semoga usiamu pun dipenuhi keberkahan, kebahagiaan, kesehatan, keselamatan dan kesejahteraan bagi Nana dan keluarga.
               </p>
-
-               <p className="text-gray-700 text-xs sm:text-sm md:text-base px-2 sm:px-4">
-                 Di sela waktu yang tersirat, ada langkah kecil diam-diam berjuang, memperbaiki, dan memantaskan.
-              </p>
             </div>
 
             {/* Scratch Layer */}
