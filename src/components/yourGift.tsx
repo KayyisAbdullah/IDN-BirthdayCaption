@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 interface GiftProps {}
 
 const YourGift: React.FC<GiftProps> = () => {
-  const voucherCode = "GIFT2025";
-  const qrValue = `https://yourdomain.com/redeem/${voucherCode}`;
+ 
+  const qrValue = `https://link.dana.id/danakaget?c=sapvsw746&r=crgk3s&orderId=20250825101214721515010300166124137835953`;
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-pink-300 via-purple-200 to-yellow-200 text-center px-6 animate-gradient-x">
@@ -41,12 +41,8 @@ const YourGift: React.FC<GiftProps> = () => {
 
             {/* Voucher Details */}
             <div className="pt-4 border-t border-purple-200">
-              <p className="text-2xl font-mono text-purple-700 font-bold tracking-wider">
-                Kode:{" "}
-                <span className="text-pink-600">{voucherCode}</span>
-              </p>
               <p className="text-sm text-gray-600 mt-3 font-medium">
-                Berlaku hingga 31 Desember 2025
+                Berlaku hingga 26 Desember 2025
               </p>
             </div>
           </div>
